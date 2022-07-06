@@ -1,0 +1,54 @@
+td{
+    background-color: #ccccccd9;
+    height:70px;
+    width:70px;
+    text-align: center;
+}
+.highlight-column
+{
+background-color: #C0C0C0;
+}
+.marked_player1
+{
+    background-color:red;
+    border-color: red;
+}
+.marked_player2
+{
+    background-color:green;
+    border-color:green;
+}
+button
+{
+height:60px;
+width:60px; 
+border-radius: 50%;
+border: 2px solid #f44336;
+/* border: 4px solid #04AA6D; */
+background-color:#fff
+}
+input.form-control
+{
+    width:243px;
+    display:inline;
+}
+span
+{
+   font-size: 1.5em;
+}
+@media  screen and (max-width:985px) {
+    td{
+        height:52px;
+        width:52px;
+    }
+    button
+    {
+    border-width: 1.5px;
+    height:30px;
+    width:30px; 
+    }
+    input.form-control
+    {
+        width:173px;
+    }    
+}
