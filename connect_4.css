@@ -36,6 +36,15 @@ span
 {
    font-size: 1.5em;
 }
+.blinker
+{
+    animation: blink 2s linear 3;
+
+}
+@keyframes blink {
+    50% {opacity:0;}
+}
+
 @media  screen and (max-width:985px) {
     td{
         height:52px;
