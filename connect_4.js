@@ -34,7 +34,10 @@ return newarr
 }
 function Congratulate(elements_connected)
 {
-console.log(elements_connected);
+
+if(player.name)
+{$(".Winner_announcement").text("The Winner is "+player.name).css("color",player.color);}
+else{$(".Winner_announcement").text("The Winner is "+player.color).css("color",player.color);}
 elements_connected.forEach(ele=>ele.children().addClass('blinker'))
 }
 function checkFirstDiagonal(index,marked_row)
@@ -197,6 +200,7 @@ token.on('click',function(event)
             Congratulate(result);
         }
         $("td").children(":not([class^=marked])").css('border-color','green');
+        player.name=$("input").eq(1).val();
         player.id='P2';
         player.color='green';
 	    player.class='marked_player2';
@@ -221,6 +225,7 @@ token.on('click',function(event)
         }
         $("td").children(":not([class^=marked])").css('border-color','red');
         player.id='P1'; 
+        player.name=$("input").eq(0).val();
         player.color='red';
         player.class='marked_player1';   
     } 
